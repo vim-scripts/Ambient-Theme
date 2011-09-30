@@ -1,0 +1,29 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3758
+
+Sets your vim theme's background based on ambient light.
+
+WORKS ON OS X ONLY.
+
+The plugin switches the background variable from light to dark. Works smoothly with solarized.
+
+# Limitations
+
+Vim doesn't have a timer. So this uses a hack which only works in Normal mode. That means the theme will switch after you exit Insert mode.
+
+# Configuration
+
+g:AmbientLightThreshold is the sensor value which triggers the switch. The default is 100000; you can experiment yourself if you want.
+
+echo g:LightSensorValue will let you see the current value.
+
+# Compiling the binary yourself
+
+There's a binary that reads the light sensor value. It is precompiled for OSX 10.5 and later.
+
+You'll need gcc to compile it IF YOU HAVE OSX 10.4 OR LESS. Otherwise, it's as simple as:
+
+make clean; make
+
+---
+
+Git repository: https://github.com/leonid-shevtsov/ambient_theme.vim
